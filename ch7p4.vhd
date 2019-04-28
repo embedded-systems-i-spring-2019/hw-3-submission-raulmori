@@ -17,15 +17,16 @@ architecture rtl_behavioral of ckt_rtl is       -- Architecture #2
 
         begin
              with S1 select             --1st Mux
-                 MUX_OUT1  <= X when '1',
-                                 Y when '0',
-                                 (others => '0') when others;
+                 MUX_OUT1  <=
+                             X when '1',
+                             Y when '0',
+                               (others => '0') when others;
 
 
              with S0 select         --2nd Mux
                  MUX_OUT2  <= 
-                          RBtemp when '1',
-                          Y when '0',
+                             RBtemp when '1',
+                             Y when '0',
                                  (others => '0') when others;
 
 
